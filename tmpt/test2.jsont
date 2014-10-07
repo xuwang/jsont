@@ -1,0 +1,4 @@
+"Hello {hello-again}"
+{.repeated section my-list}
+	{name} said "Hello {said}"
+{.end}

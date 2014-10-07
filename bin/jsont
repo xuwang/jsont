@@ -1,0 +1,30 @@
+#!/usr/bin/python
+
+"""JsonTemplate
+
+Usage:
+  jsont <template> <json_data>
+  jsont (-h | --help)
+  jsont --version
+  
+Options:
+  -h --help     Show this screen.
+  --version     Show version.
+
+"""
+from docopt import docopt
+from pprint import pprint
+import jsontemplate
+import json
+
+def more_formatters(formatter_name):
+  if formatter_name.endswith('.jsont'):
+    return jsontemplate.FromFile(open(formatter_name)).expand
+  else:
+    return None  # consult default formatters
+
+if __name__ == '__main__':
+    args = docopt(__doc__, version='JsonTemplate 0.85')
+    t = jsontemplate.FromFile(open(args['<template>']), more_formatters=more_formatters)
+    data = json.load(open(args['<json_data>']))
+    print(t.expand(data))

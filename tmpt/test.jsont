@@ -1,0 +1,2 @@
+Template said: "Hello {hello}"
+External template said: {external|tmpt/test2.jsont}

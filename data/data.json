@@ -1,0 +1,24 @@
+{
+    "external": {
+        "hello-again": "USA",
+        "my-list": [
+            {
+                "name": "John",
+                "said": "California"
+            },
+            {
+                "name": "Smith",
+                "said": "New York"
+            },
+            {
+                "name": "Sarra",
+                "said": "San Fransisco"
+            },
+            {
+                "name": "Mary",
+                "said": "Chicago"
+            }
+        ]
+    },
+    "hello": "World"
+}
